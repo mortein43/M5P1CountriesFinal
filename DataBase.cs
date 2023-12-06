@@ -24,14 +24,14 @@ namespace M5P1CountriesFinal
 
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
-                    command.CommandText = @"create table Countries
-                    (Id integer not null constraint Coutries_pk primary key constraint Coutries_pk2 unique,
-                    Name                TEXT    not null,
-                    Capital             TEXT    not null,
-                    NumberOfInhabitants integer not null,
-                    Area                decimal not null,
-                    PartOfTheWorld      TEXT    not null
-                    );";
+                    command.CommandText = @"CREATE TABLE Countries (
+                                            Id INTEGER PRIMARY KEY NOT NULL,
+                                            Name TEXT NOT NULL,
+                                            Capital TEXT NOT NULL,
+                                            NumberOfInhabitants INTEGER NOT NULL,
+                                            Area DECIMAL NOT NULL,
+                                            PartOfTheWorld TEXT NOT NULL
+                                            );";
                     command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
                 }
